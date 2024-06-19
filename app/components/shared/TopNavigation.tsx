@@ -36,11 +36,15 @@ export const TopNavigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > threshold) {
-        setTopNavContainerClasses("py-3 bg-teal-400");
+        setTopNavContainerClasses(
+          "py-3 bg-teal-400 top-4 px-2 mx-6 rounded-xl"
+        );
         setTopNavButtonClasses("text-gray-50 bg-gray-900 hover:bg-gray-600");
         setTopNavLinkClasses("text-gray-900 hover:text-gray-500");
       } else {
-        setTopNavContainerClasses("py-6 bg-white");
+        setTopNavContainerClasses(
+          "py-6 px-6 bg-white top-0 px-0 mx-0 rounded-none"
+        );
         setTopNavButtonClasses("text-gray-900 bg-teal-400 hover:bg-teal-600");
         setTopNavLinkClasses("text-gray-500 hover:text-gray-900");
       }
@@ -54,9 +58,7 @@ export const TopNavigation = () => {
   }, [threshold]);
 
   return (
-    <nav
-      className={`${topNavContainerClasses} px-4 lg:px-12 transition-all sticky top-0`}
-    >
+    <nav className={`${topNavContainerClasses} lg:px-12 transition-all sticky`}>
       <div className="flex items-center justify-between">
         <div className="flex-1 flex gap-12 items-center justify-start">
           <p className="text-2xl tracking-wide font-bold text-gray-900 text-center md:text-left">

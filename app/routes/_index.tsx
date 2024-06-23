@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { HeroBanner } from "~/components/shared/HeroBanner";
+import { Services } from "~/components/shared/Services";
 import { TopNavigation } from "~/components/shared/TopNavigation";
 
 export const meta: MetaFunction = () => {
@@ -18,6 +19,7 @@ export default function Index() {
     <>
       <TopNavigation />
       <HeroBanner />
+      <Services />
     </>
   );
 }

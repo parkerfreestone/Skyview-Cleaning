@@ -10,15 +10,15 @@ type NavLink = {
 const navLinks: NavLink[] = [
   {
     text: "Home",
-    link: "#hero",
-  },
-  {
-    text: "Services",
-    link: "#services",
+    link: "#home",
   },
   {
     text: "About Us",
     link: "#about",
+  },
+  {
+    text: "Services",
+    link: "#services",
   },
 ];
 
@@ -125,7 +125,7 @@ export const TopNavigation = () => {
             </a>
           ))}
           <button
-            className={`${topNavButtonClasses} px-4 py-2 rounded-md mt-4`}
+            className={`${topNavButtonClasses} px-4 py-2 rounded-md mt-4 w-full`}
             onClick={() => setIsMobileNavOpen(false)}
           >
             <span>Schedule A Cleaning</span>

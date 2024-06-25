@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        "hero-banner": "url('/public/images/ai-cleaning-banner.webp')",
+        "hero-banner": "url('/public/images/hero.jpg')",
       },
       colors: {
         border: "hsl(var(--border))",

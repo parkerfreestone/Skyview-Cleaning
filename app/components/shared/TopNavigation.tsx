@@ -63,6 +63,10 @@ export const TopNavigation = () => {
     } else {
       document.body.style.overflow = "auto";
     }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [isMobileNavOpen]);
 
   return (

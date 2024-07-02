@@ -131,7 +131,7 @@ export const TopNavigation = () => {
           ))}
 
           <Link
-            to="/"
+            to="/schedule"
             className={`${topNavButtonClasses} px-4 py-2 rounded-md mt-4 w-full`}
           >
             <span>Schedule A Cleaning</span>

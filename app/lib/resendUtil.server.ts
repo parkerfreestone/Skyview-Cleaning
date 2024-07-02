@@ -7,7 +7,7 @@ export const sendEmail = async (
   submissionTemplate: string
 ) => {
   try {
-    let recipientEmail = "parkerfreestone@gmail.com";
+    let recipientEmail = "skyviewcleaningut@gmail.com";
 
     let info = {
       from: "Ryftt Support <skyview-cleaning-submissions@ryftt.dev>",

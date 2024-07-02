@@ -111,3 +111,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.react-calendar {
+  width: 100% !important;
+  overflow: hidden !important;
+  /* text-decoration: none; */
+}

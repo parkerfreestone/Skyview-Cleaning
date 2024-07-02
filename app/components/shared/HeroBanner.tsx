@@ -1,8 +1,6 @@
 import { MoveRight } from "lucide-react";
-import Banner from "../../../public/images/hero.jpg";
+import Banner from "/images/hero.jpg";
 import { motion } from "framer-motion";
-
-//bg-hero-banner bg-no-repeat
 
 export const HeroBanner = () => {
   return (

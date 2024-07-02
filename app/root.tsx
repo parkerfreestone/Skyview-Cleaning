@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
+import { Footer } from "./components/shared/Footer";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,7 +19,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        {/* <ScrollRestoration /> */}
+        <Footer />
+        <ScrollRestoration />
         <Scripts />
       </body>
     </html>

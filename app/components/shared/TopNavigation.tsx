@@ -1,6 +1,7 @@
-import { Calendar, GanttChart, Menu, MenuSquare, X } from "lucide-react";
+import { Calendar, Cloud, GanttChart, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "@remix-run/react";
 
 type NavLink = {
   text: string;
@@ -10,15 +11,15 @@ type NavLink = {
 const navLinks: NavLink[] = [
   {
     text: "Home",
-    link: "#home",
+    link: "/#home",
   },
   {
     text: "About Us",
-    link: "#about",
+    link: "/#about",
   },
   {
     text: "Services",
-    link: "#services",
+    link: "/#services",
   },
 ];
 
@@ -38,7 +39,7 @@ export const TopNavigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > threshold) {
+      if (window.scrollY >= threshold) {
         setTopNavContainerClasses("py-3 bg-teal-400");
         setTopNavButtonClasses("text-gray-50 bg-gray-900 hover:bg-gray-600");
         setTopNavLinkClasses("text-gray-900 hover:text-gray-500");
@@ -71,7 +72,10 @@ export const TopNavigation = () => {
       >
         <div className="flex items-center justify-between">
           <div className="flex-1 flex gap-12 items-center justify-start">
-            <p className="text-2xl tracking-wide font-bold text-gray-900 text-center md:text-left">
+            <p className="text-2xl tracking-wide font-bold text-gray-900 text-center md:text-left flex gap-2">
+              <span>
+                <Cloud />
+              </span>
               Skyview Cleaning
             </p>
 
@@ -99,13 +103,14 @@ export const TopNavigation = () => {
             )}
           </button>
 
-          <button
+          <Link
+            to="/schedule"
             className={`${topNavButtonClasses} hidden px-4 py-2 rounded-md md:flex items-center justify-center transition-colors`}
           >
             <Calendar className="hidden md:flex mr-2 h-4 w-4" />
             <span className="inline-block md:hidden">Schedule</span>
             <span className="hidden md:inline-block">Schedule A Cleaning</span>
-          </button>
+          </Link>
         </div>
 
         <motion.div
@@ -115,21 +120,22 @@ export const TopNavigation = () => {
           className="fixed top-0 left-0 w-screen h-screen bg-white -z-10 flex flex-col items-center justify-start pt-20 p-6"
         >
           {navLinks.map(({ text, link }) => (
-            <a
+            <Link
               key={text}
-              href={link}
+              to={link}
               className={`${topNavLinkClasses} text-lg transition-colors w-full py-6 border-t`}
               onClick={() => setIsMobileNavOpen(false)}
             >
               {text}
-            </a>
+            </Link>
           ))}
-          <button
+
+          <Link
+            to="/"
             className={`${topNavButtonClasses} px-4 py-2 rounded-md mt-4 w-full`}
-            onClick={() => setIsMobileNavOpen(false)}
           >
             <span>Schedule A Cleaning</span>
-          </button>
+          </Link>
         </motion.div>
       </nav>
     </>

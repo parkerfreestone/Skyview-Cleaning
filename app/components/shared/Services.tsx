@@ -15,7 +15,7 @@ const services = [
     icon: <Droplet className="h-8 w-8 text-inherit mb-6" />,
   },
   {
-    name: "Gutter cleaning",
+    name: "Gutter Cleaning",
     sub: "Clear blocked gutters",
     icon: <Layers className="h-8 w-8 text-inherit mb-6" />,
   },

@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@react-email/components": "^0.0.20",
     "@remix-run/node": "^2.9.2",
     "@remix-run/react": "^2.9.2",
     "@remix-run/serve": "^2.9.2",
@@ -21,7 +22,11 @@
     "isbot": "^4.1.0",
     "lucide-react": "^0.395.0",
     "react": "^18.2.0",
+    "react-calendar": "^5.0.0",
     "react-dom": "^18.2.0",
+    "react-tailwindcss-select": "^1.8.5",
+    "react-toastify": "^10.0.5",
+    "resend": "^3.4.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },

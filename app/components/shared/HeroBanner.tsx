@@ -1,6 +1,7 @@
 import { MoveRight } from "lucide-react";
 import Banner from "/images/hero.jpg";
 import { motion } from "framer-motion";
+import { Link } from "@remix-run/react";
 
 export const HeroBanner = () => {
   return (
@@ -27,10 +28,12 @@ export const HeroBanner = () => {
           transition={{ delay: 0.2 }}
           className="mt-auto sm:mt-0 z-20"
         >
-          <button className="sm:w-auto w-full px-4 py-3 bg-teal-400 rounded-xl flex items-center justify-center transition-colors font-bold hover:bg-teal-600">
-            <span>Schedule A Cleaning</span>
-            <MoveRight className="ml-2 h-6 w-6" />
-          </button>
+          <Link to="/schedule">
+            <button className="sm:w-auto w-full px-4 py-3 bg-teal-400 rounded-xl flex items-center justify-center transition-colors font-bold hover:bg-teal-600">
+              <span>Schedule A Cleaning</span>
+              <MoveRight className="ml-2 h-6 w-6" />
+            </button>
+          </Link>
         </motion.div>
       </div>
     </div>
